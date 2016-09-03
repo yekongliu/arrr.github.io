@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script>
+			arr = [{
+				'name': 'json'
+			}, {
+				"idname": 'tom'
+			}, {
+				'idname': 'bim'
+			}, {
+				'name': 'json'
+			}];
+			var obj = {},
+				newArr = [],
+				keyStr = "";
+			for(var i = 0, len = arr.length; i < len; i++) {
+				keyStr = JSON.stringify(arr[i]);
+				if(!obj[keyStr]) {
+					obj[keyStr] = true;
+					newArr.push(arr[i]);
+				}
+			}
+		</script>
+	</body>
+
+</html>

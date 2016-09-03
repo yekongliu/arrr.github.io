@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script>
+			function unique(a) {
+
+				var res = a.filter(function(item, index, array) {
+					return array.indexOf(item) === index;
+				});
+
+				return res;
+			}
+
+			var a = [1, 1, '1', '2', 1];
+			var ans = unique(a);
+			console.log(ans); // => [1, "1", "2"]
+		</script>
+	</body>
+
+</html>
